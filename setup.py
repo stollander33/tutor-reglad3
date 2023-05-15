@@ -13,7 +13,7 @@ def load_readme():
 def load_about():
     about = {}
     with io.open(
-        os.path.join(HERE, "tutorindigo", "__about__.py"),
+        os.path.join(HERE, "tutorreglad3", "__about__.py"),
         "rt",
         encoding="utf-8",
     ) as f:
@@ -25,13 +25,13 @@ ABOUT = load_about()
 
 
 setup(
-    name="tutor-indigo",
+    name="tutor-reglad3",
     version=ABOUT["__version__"],
-    url="https://github.com/overhangio/tutor-indigo",
+    url="https://github.com/overhangio/tutor-reglad3",
     project_urls={
         "Documentation": "https://docs.tutor.overhang.io/",
-        "Code": "https://github.com/overhangio/tutor-indigo",
-        "Issue tracker": "https://github.com/overhangio/tutor-indigo/issues",
+        "Code": "https://github.com/overhangio/tutor-reglad3",
+        "Issue tracker": "https://github.com/overhangio/tutor-reglad3/issues",
         "Community": "https://discuss.openedx.org",
     },
     license="AGPLv3",
@@ -45,7 +45,7 @@ setup(
     include_package_data=True,
     python_requires=">=3.7",
     install_requires=["tutor>=15.0.0,<16.0.0"],
-    entry_points={"tutor.plugin.v1": ["indigo = tutorindigo.plugin"]},
+    entry_points={"tutor.plugin.v1": ["reglad3 = tutorreglad3.plugin"]},
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",

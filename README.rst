@@ -17,8 +17,8 @@ Indigo was specially developed to be used with `Tutor <https://docs.tutor.overha
 
 Since Tutor v13.2.0, Indigo can be installed as a Tutor plugin::
 
-    pip install tutor-indigo
-    tutor plugins enable indigo
+    pip install tutor-reglad3
+    tutor plugins enable reglad3
     tutor config save
 
 Rebuild the Openedx docker image::
@@ -29,21 +29,21 @@ Restart your platform::
 
     tutor local start -d
 
-You will then have to enable the "indigo" theme, as per the `Tutor documentation <https://docs.tutor.overhang.io/local.html#setting-a-new-theme>`__::
+You will then have to enable the "reglad3" theme, as per the `Tutor documentation <https://docs.tutor.overhang.io/local.html#setting-a-new-theme>`__::
 
-    tutor local do settheme indigo
+    tutor local do settheme reglad3
 
 Configuration
 -------------
 
-- ``INDIGO_WELCOME_MESSAGE`` (default: "The place for all your online learning")
-- ``INDIGO_PRIMARY_COLOR`` (default: "#3b85ff")
-- ``INDIGO_FOOTER_NAV_LINKS`` (default: ``[{"title": "About", "url": "/about"}, {"title": "Contact", "url": "/contact"}]``)
-- ``INDIGO_FOOTER_LEGAL_LINKS`` (default: ``[{"title": "Terms of service", "url": "/tos"}, {"title": "Indigo theme for Open edX", "url": "https://github.com/overhangio/tutor-indigo"}]``)
+- ``REGLAD3_WELCOME_MESSAGE`` (default: "The place for all your online learning")
+- ``REGLAD3_PRIMARY_COLOR`` (default: "#3b85ff")
+- ``REGLAD3_FOOTER_NAV_LINKS`` (default: ``[{"title": "About", "url": "/about"}, {"title": "Contact", "url": "/contact"}]``)
+- ``REGLAD3_FOOTER_LEGAL_LINKS`` (default: ``[{"title": "Terms of service", "url": "/tos"}, {"title": "Indigo theme for Open edX", "url": "https://github.com/overhangio/tutor-reglad3"}]``)
 
-The ``INDIGO_*`` settings listed above may be modified by running ``tutor config save --set INDIGO_...=...``. For instance, to remove all links from the footer, run::
+The ``REGLAD3_*`` settings listed above may be modified by running ``tutor config save --set REGLAD3_...=...``. For instance, to remove all links from the footer, run::
 
-    tutor config save --set "INDIGO_FOOTER_NAV_LINKS=[]" --set "INDIGO_FOOTER_LEGAL_LINKS=[]"
+    tutor config save --set "REGLAD3_FOOTER_NAV_LINKS=[]" --set "REGLAD3_FOOTER_LEGAL_LINKS=[]"
 
 Customization
 -------------
@@ -53,7 +53,7 @@ This plugin can serve as a starting point to create your own themes. Just fork t
 Changing the default logo and other images
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The theme images are stored in `tutorindigo/templates/indigo/lms/static/images <https://github.com/overhangio/tutor-indigo/tree/master/tutorindigo/templates/indigo/lms/static/images>`__ for the LMS, and in `tutorindigo/templates/indigo/cms/static/images <https://github.com/overhangio/tutor-indigo/tree/master/tutorindigo/templates/indigo/cms/static/images>`__ for the CMS. To use custom images in your theme, just replace the files stored in these folders with your own.
+The theme images are stored in `tutorreglad3/templates/reglad3/lms/static/images <https://github.com/overhangio/tutor-reglad3/tree/master/tutorreglad3/templates/reglad3/lms/static/images>`__ for the LMS, and in `tutorreglad3/templates/reglad3/cms/static/images <https://github.com/overhangio/tutor-reglad3/tree/master/tutorreglad3/templates/reglad3/cms/static/images>`__ for the CMS. To use custom images in your theme, just replace the files stored in these folders with your own.
 
 Overriding the default "about", "contact", etc. static pages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -62,7 +62,7 @@ By default, the ``/about`` and ``/contact`` pages contain a simple line of text:
 
 The static templates used by Open edX to render those pages are all stored in the `edx-platform/lms/templates/static_templates <https://github.com/edx/edx-platform/tree/open-release/olive.master/lms/templates/static_templates>`__ folder. To override those templates, you should add your own in the following folder::
 
-    ls tutorindigo/templates/indigo/lms/templates/static_templates"
+    ls tutorreglad3/templates/reglad3/lms/templates/static_templates"
 
 For instance, edit the "donate.html" file in this directory. We can derive the content of this file from the contents of the `donate.html <https://github.com/edx/edx-platform/blob/open-release/olive.master/lms/templates/static_templates/donate.html>`__ static template in edx-platform::
 
@@ -94,4 +94,4 @@ This Tutor plugin is maintained by Régis Behmo from `Overhang.IO <https://overh
 License
 -------
 
-This work is licensed under the terms of the `GNU Affero General Public License (AGPL) <https://github.com/overhangio/tutor-indigo/blob/master/LICENSE.txt>`_.
+This work is licensed under the terms of the `GNU Affero General Public License (AGPL) <https://github.com/overhangio/tutor-reglad3/blob/master/LICENSE.txt>`_.
